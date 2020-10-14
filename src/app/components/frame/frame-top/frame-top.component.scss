@@ -1,0 +1,7 @@
+nav {
+	height: 50px;
+}
+	
+.custom-control-input:checked ~ .custom-control-label::before {
+	background: orange;
+}

@@ -1,0 +1,16 @@
+<div class="modal-header">
+  <h4 class="modal-title">CAFE Messages</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+	<span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+	<div *ngFor="let item of groupedMessages | keyvalue">
+		<h5>{{ item.key }}</h5>
+		<hr/>
+		<ngb-alert *ngFor="let msg of item.value" [type]="msg.type" (close)="deleteMessage(msg)">{{ msg.message }}</ngb-alert>
+	</div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary btn-block" (click)="undoDismissals()">Undo Dismissals</button>
+</div>
