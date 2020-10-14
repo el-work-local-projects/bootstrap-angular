@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'bootstrap-angular';
+	mode: string = 'text';
+	modeOptions: Array<string> = [
+		'text',
+		'labels',
+		'buttons',
+		'tables',
+		'forms',
+		'navigation',
+		'alerts',
+		'time-selection',
+		'progress',
+		'list-groups',
+		'dialogs',
+		'containers'
+	];
+	
+    constructor(public router: Router) { }
+	
+	goToView(view) {
+		this.mode = view;
+		this.router.navigate([view], {});
+	}
 }

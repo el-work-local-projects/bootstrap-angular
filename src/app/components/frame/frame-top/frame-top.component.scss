@@ -1,7 +1,11 @@
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
 nav {
 	height: 50px;
 }
 	
 .custom-control-input:checked ~ .custom-control-label::before {
-	background: orange;
+	background: theme-color("warning") linear-gradient(180deg, theme-color-level(warning, -5), theme-color("warning")) repeat-x;
 }
