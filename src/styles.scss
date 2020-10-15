@@ -50,3 +50,16 @@ $body-bg: gray("200");
 @import "../node_modules/bootstrap/scss/spinners";
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/print";
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: gray("200");
+}
+
+#app {
+	height: 100%;
+}

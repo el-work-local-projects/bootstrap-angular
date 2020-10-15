@@ -1,4 +1,4 @@
-<app-frame-top></app-frame-top>
+<div cafe-frame-top></div>
 <div class="container-fluid app-content">
 	<form id="selector" class="form-inline mt-1 pb-1 border-bottom border-secondary">
 		<label class="mr-2">Feature:</label>
@@ -7,6 +7,8 @@
 			<option *ngFor="let option of modeOptions">{{ option }}</option>
 		</select>
 	</form>
-	<router-outlet></router-outlet>
+	<div id="selection">
+		<router-outlet></router-outlet>
+	</div>
 </div>
 <app-frame-footer></app-frame-footer>

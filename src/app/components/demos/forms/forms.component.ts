@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormsComponent implements OnInit {
 
+	options = ['Option A', 'Option B', 'Option C'];
+	selected = {
+		radio: '',
+		checkbox: [],
+		select: '',
+		multiselect: []
+	};
+
   constructor() { }
 
   ngOnInit(): void {

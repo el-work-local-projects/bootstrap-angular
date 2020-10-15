@@ -5,7 +5,7 @@ import { Message } from '../../../classes/message';
 import { FrameMessageModalComponent } from '../frame-message-modal/frame-message-modal.component';
 
 @Component({
-  selector: 'app-frame-top',
+  selector: '[cafe-frame-top]',
   templateUrl: './frame-top.component.html',
   styleUrls: ['./frame-top.component.scss']
 })

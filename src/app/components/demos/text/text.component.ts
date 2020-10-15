@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextComponent implements OnInit {
 
+  content: string = '';
+
   constructor() { }
 
   ngOnInit(): void {

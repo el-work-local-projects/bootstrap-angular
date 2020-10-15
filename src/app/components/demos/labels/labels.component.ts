@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LabelsComponent implements OnInit {
 
+	types: string[] = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'];
+
   constructor() { }
 
   ngOnInit(): void {

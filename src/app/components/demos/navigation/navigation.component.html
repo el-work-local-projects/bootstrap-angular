@@ -1,1 +1,169 @@
-<p>navigation works!</p>
+<div class="row">
+	<div class="col">
+		<h5>Navs</h5>
+		<ul class="nav">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Active</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+				</div>
+			</li>
+		</ul>
+		<ul class="nav justify-content-center">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Active</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Active</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+		
+		<h5>Tabs</h5>
+		<ul class="nav nav-tabs mb-2">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Active</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+		
+		<ul ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-tabs">
+			<li [ngbNavItem]="1">
+				<a ngbNavLink>First</a>
+				<ng-template ngbNavContent>
+					<p>This is the first tab</p>
+				</ng-template>
+			</li>
+			<li [ngbNavItem]="2">
+				<a ngbNavLink>Second</a>
+				<ng-template ngbNavContent>
+					<p>This is the second tab</p>
+				</ng-template>
+			</li>
+			<li [ngbNavItem]="3" [disabled]="true">
+				<a ngbNavLink>Disabled</a>
+				<ng-template ngbNavContent>
+					<p>Shouldn't see this</p>
+				</ng-template>
+			</li>
+		</ul>
+		<div [ngbNavOutlet]="nav" class="mt-2"></div>
+		
+		<h5>Pills</h5>
+		<ul class="nav nav-pills mb-2">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Active</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+		<ul class="nav nav-pills nav-fill">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Active</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col">
+		<h5>Breadcrumb</h5>
+		<nav>
+			<ol class="breadcrumb">
+				<li *ngFor="let crumb of breadcrumbs2" class="breadcrumb-item" [ngClass]="{active: activeCrumb === crumb}">
+					<a *ngIf="activeCrumb !== crumb" href="#">{{ crumb }}</a>
+					<div *ngIf="activeCrumb === crumb">{{ crumb }}</div>
+				</li>
+			</ol>
+		</nav>
+		<nav>
+			<ol class="breadcrumb">
+				<li *ngFor="let crumb of breadcrumbs3" class="breadcrumb-item" [ngClass]="{active: activeCrumb === crumb}">
+					<a *ngIf="activeCrumb !== crumb" href="#">{{ crumb }}</a>
+					<div *ngIf="activeCrumb === crumb">{{ crumb }}</div>
+				</li>
+			</ol>
+		</nav>
+		
+		<h5>Pagination</h5>
+		<nav>
+			<ul class="pagination pagination-sm">
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<span class="mdi mdi-arrow-left"></span>
+					</a>
+				</li>
+				<li *ngFor="let ind of pages" class="page-item" [ngClass]="{active: activePage === ind}">
+					<a class="page-link" href="#">{{ ind }}</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<span class="mdi mdi-arrow-right"></span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<nav>
+			<ul class="pagination">
+				<li class="page-item"><a class="page-link" href="#">
+					<span class="mdi mdi-arrow-left"></span>
+				</a></li>
+				<li *ngFor="let ind of pages" class="page-item" [ngClass]="{active: activePage === ind}">
+					<a class="page-link" href="#">{{ ind }}</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">
+					<span class="mdi mdi-arrow-right"></span>
+				</a></li>
+			</ul>
+		</nav>
+		<nav>
+			<ul class="pagination pagination-lg">
+				<li class="page-item"><a class="page-link" href="#">
+					<span class="mdi mdi-arrow-left"></span>
+				</a></li>
+				<li *ngFor="let ind of pages" class="page-item" [ngClass]="{active: activePage === ind}">
+					<a class="page-link" href="#">{{ ind }}</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">
+					<span class="mdi mdi-arrow-right"></span>
+				</a></li>
+			</ul>
+		</nav>
+		<ngb-pagination [collectionSize]="9" [pageSize]="3" [(page)]="activePage" [boundaryLinks]="true"></ngb-pagination>
+	</div>
+</div>
