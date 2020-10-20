@@ -20,6 +20,13 @@ import { ProgressComponent } from './components/demos/progress/progress.componen
 import { ListGroupsComponent } from './components/demos/list-groups/list-groups.component';
 import { DialogsComponent } from './components/demos/dialogs/dialogs.component';
 import { ContainersComponent } from './components/demos/containers/containers.component';
+import { NestedModalOneComponent } from './components/demos/dialogs/nested-modal-one/nested-modal-one.component';
+import { NestedModalTwoComponent } from './components/demos/dialogs/nested-modal-two/nested-modal-two.component';
+import { ValidatedModalComponent } from './components/demos/dialogs/validated-modal/validated-modal.component';
+import { SizedModalComponent } from './components/demos/dialogs/sized-modal/sized-modal.component';
+import { ButtonlessModalComponent } from './components/demos/dialogs/buttonless-modal/buttonless-modal.component';
+import { ScrollableModalComponent } from './components/demos/dialogs/scrollable-modal/scrollable-modal.component';
+import { ComponentFormsComponent } from './components/demos/component-forms/component-forms.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +45,14 @@ import { ContainersComponent } from './components/demos/containers/containers.co
     ProgressComponent,
     ListGroupsComponent,
     DialogsComponent,
-    ContainersComponent
+    ContainersComponent,
+    NestedModalOneComponent,
+    NestedModalTwoComponent,
+    ValidatedModalComponent,
+    SizedModalComponent,
+    ButtonlessModalComponent,
+    ScrollableModalComponent,
+    ComponentFormsComponent
   ],
   imports: [
     BrowserModule,

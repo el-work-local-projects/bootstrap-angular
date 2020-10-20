@@ -1,1 +1,92 @@
-<p>dialogs works!</p>
+<div class="row">
+	<div class="col">
+		<h5>Modals</h5>
+		<div class="row">
+			<div class="col-3">
+				<h6>Native</h6>
+				<p>N/A</p>
+				<div id="exampleModal" class="modal fade" role="dialog" tabindex="-1">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Title</h5>
+								<button type="button" class="close" data-dismiss="modal">
+									<span>&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p>Body</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary">Okay</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-9">
+				<h6>Component</h6>				
+				<button class="btn btn-secondary" (click)="showNestedModal()">Open Modal</button>
+				<button class="btn btn-secondary ml-1" (click)="showLimitedModal()">Limited Close</button>
+				<button class="btn btn-secondary ml-1" (click)="showSizedModal('xl')">XL</button>
+				<button class="btn btn-secondary ml-1" (click)="showSizedModal('lg')">LG</button>
+				<button class="btn btn-secondary ml-1" (click)="showSizedModal('sm')">SM</button>
+				<button class="btn btn-secondary ml-1" (click)="showScrollableModal()">Scrollable</button>
+				<button class="btn btn-secondary ml-1" (click)="showButtonlessModal()">No Buttons</button>
+			</div>
+		</div>
+		<h5>Tooltips</h5>
+		<div class="row">
+			<div class="col">
+				<h6>Component</h6>
+				<div class="row mb-1">
+					<div class="col">
+						<button class="btn btn-secondary btn-sm mr-1" placement="top" ngbTooltip="Tooltip">Tip: top</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="top-left" ngbTooltip="Tooltip">Tip: topleft</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="top-right" ngbTooltip="Tooltip">Tip: topright</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="bottom" ngbTooltip="Tooltip">Tip: bottom</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="bottom-left" ngbTooltip="Tooltip">Tip: bottomleft</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="bottom-right" ngbTooltip="Tooltip">Tip: bottomright</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<button class="btn btn-secondary btn-sm mr-1" placement="right" ngbTooltip="Tooltip">Tip: right</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="right-top" ngbTooltip="Tooltip">Tip: righttop</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="right-bottom" ngbTooltip="Tooltip">Tip: rightbottom</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="left" ngbTooltip="Tooltip">Tip: left</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="left-top" ngbTooltip="Tooltip">Tip: lefttop</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="left-bottom" ngbTooltip="Tooltip">Tip: leftbottom</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h5>Popovers</h5>
+		<div class="row">
+			<div class="col">
+				<h6>Component</h6>
+				<div class="row mb-1">
+					<div class="col">
+						<button class="btn btn-secondary btn-sm mr-1" placement="top" ngbPopover="'Popover'" popoverTitle="Title">Pop: top</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="top-left" ngbPopover="'Popover'" popoverTitle="Title">Pop: topleft</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="top-right" ngbPopover="'Popover'" popoverTitle="Title">Pop: topright</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="bottom" ngbPopover="'Popover'" popoverTitle="Title">Pop: bottom</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="bottom-left" ngbPopover="'Popover'" popoverTitle="Title">Pop: bottomleft</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="bottom-right" ngbPopover="'Popover'" popoverTitle="Title">Pop: bottomright</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<button class="btn btn-secondary btn-sm mr-1" placement="right" ngbPopover="'Popover'" popoverTitle="Title">Pop: right</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="right-top" ngbPopover="'Popover'" popoverTitle="Title">Pop: righttop</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="right-bottom" ngbPopover="'Popover'" popoverTitle="Title">Pop: rightbottom</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="left" ngbPopover="'Popover'" popoverTitle="Title">Pop: left</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="left-top" ngbPopover="'Popover'" popoverTitle="Title">Pop: lefttop</button>
+						<button class="btn btn-secondary btn-sm mr-1" placement="left-bottom" ngbPopover="'Popover'" popoverTitle="Title">Pop: leftbottom</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

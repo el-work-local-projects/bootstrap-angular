@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListGroupsComponent implements OnInit {
 
+	styles = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
+
   constructor() { }
 
   ngOnInit(): void {

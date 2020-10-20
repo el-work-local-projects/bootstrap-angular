@@ -14,6 +14,7 @@ export class AppComponent {
 		'buttons',
 		'tables',
 		'forms',
+		'component-forms',
 		'navigation',
 		'alerts',
 		'time-selection',

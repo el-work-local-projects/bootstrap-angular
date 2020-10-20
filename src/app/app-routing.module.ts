@@ -5,6 +5,7 @@ import { LabelsComponent } from './components/demos/labels/labels.component';
 import { ButtonsComponent } from './components/demos/buttons/buttons.component';
 import { TablesComponent } from './components/demos/tables/tables.component';
 import { FormsComponent } from './components/demos/forms/forms.component';
+import { ComponentFormsComponent } from './components/demos/component-forms/component-forms.component';
 import { NavigationComponent } from './components/demos/navigation/navigation.component';
 import { AlertsComponent } from './components/demos/alerts/alerts.component';
 import { TimeSelectionComponent } from './components/demos/time-selection/time-selection.component';
@@ -38,6 +39,10 @@ const routes: Routes = [
 	{
 		path: 'forms', 
 		component: FormsComponent
+	},
+	{
+		path: 'component-forms', 
+		component: ComponentFormsComponent
 	},
 	{
 		path: 'navigation', 

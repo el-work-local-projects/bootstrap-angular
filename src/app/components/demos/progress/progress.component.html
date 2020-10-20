@@ -1,1 +1,124 @@
-<p>progress works!</p>
+<div class="row">
+	<div class="col">
+		<h5>Base Progress</h5>
+		<div class="row">
+			<div class="col">
+				<h6>Basic</h6>
+				<div *ngFor="let val of [0, 25, 50, 75, 100]" class="progress mt-1">
+					<div class="progress-bar" role="progressbar" [ngStyle]="{width: val + '%'}">{{ val }}%</div>
+				</div>
+			</div>
+			<div class="col">
+				<h6>Styles</h6>
+				<div *ngFor="let style of styles" class="progress mt-1">
+					<div class="progress-bar w-100" [ngClass]="'bg-' + style" role="progressbar"></div>
+				</div>
+			</div>
+			<div class="col">
+				<h6>Nested</h6>
+				<div class="progress mt-1">
+					<div class="progress-bar bg-primary" style="width: 10%;" role="progressbar"></div>
+					<div class="progress-bar bg-success" style="width: 25%;" role="progressbar"></div>
+					<div class="progress-bar bg-warning" style="width: 40%;" role="progressbar"></div>
+				</div>
+				<h6>Striped</h6>
+				<div class="progress mt-1">
+					<div class="progress-bar progress-bar-striped bg-primary w-100" role="progressbar"></div>
+				</div>
+				<h6>Animated</h6>
+				<div class="progress mt-1">
+					<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary w-100" role="progressbar"></div>
+				</div>
+			</div>
+		</div>
+		<h5>Component Progress</h5>
+		<div class="row">
+			<div class="col">
+				<input type="number" class="form-control" [(ngModel)]="value"/>
+				<ngb-progressbar [value]="value" [max]="max"></ngb-progressbar>
+			</div>
+			<div class="col">
+				<ngb-progressbar [value]="value" [max]="max" type="info" class="mb-1"></ngb-progressbar>
+				<ngb-progressbar [value]="value" [max]="max" type="info" class="mb-1" [striped]="true"></ngb-progressbar>
+				<ngb-progressbar [value]="value" [max]="max" type="info" [striped]="true" [animated]="true"></ngb-progressbar>
+			</div>
+		</div>
+		<h5>Base Spinner</h5>
+		<div class="row">
+			<div class="col">
+				<h6>Border</h6>
+				<div class="row">
+					<div class="col">
+						<div class="spinner-border" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+						<div *ngFor="let style of styles" class="spinner-border" [ngClass]="'text-' + style" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="spinner-border spinner-border-sm" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+						<div *ngFor="let style of styles" class="spinner-border spinner-border-sm" [ngClass]="'text-' + style" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<h6>Growing</h6>
+				<div class="row">
+					<div class="col">
+						<div class="spinner-grow" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+						<div *ngFor="let style of styles" class="spinner-grow" [ngClass]="'text-' + style" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="spinner-grow spinner-grow-sm" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+						<div *ngFor="let style of styles" class="spinner-grow spinner-grow-sm" [ngClass]="'text-' + style" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>						
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<h6>Buttons</h6>
+				<div class="row">
+					<div class="col">
+						<button class="btn btn-primary mr-1" type="button" disabled>
+							<span class="spinner-border spinner-border-sm" role="status"></span>
+							<span class="sr-only">Loading...</span>
+						</button>
+						<button class="btn btn-primary" type="button" disabled>
+							<span class="spinner-border spinner-border-sm" role="status"></span> Loading...
+						</button>						
+					</div>
+				</div>
+				<div class="row mt-1">
+					<div class="col">
+						<button class="btn btn-primary mr-1" type="button" disabled>
+							<span class="spinner-grow spinner-grow-sm" role="status"></span>
+							<span class="sr-only">Loading...</span>
+						</button>
+						<button class="btn btn-primary" type="button" disabled>
+							<span class="spinner-grow spinner-grow-sm" role="status"></span> Loading...
+						</button>						
+					</div>
+				</div>
+				<br/>
+			</div>
+		</div>
+		<h5>Component Spinner</h5>
+		<p>N/A</p>
+	</div>
+</div>
